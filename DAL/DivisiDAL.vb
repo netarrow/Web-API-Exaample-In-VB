@@ -26,6 +26,22 @@ Public Class DivisiDAL
         End Using
     End Function
 
+    Public Sub TambahDivisi(_divisi As Divisi)
+        Using conn As New OracleConnection(GetConnStr())
+            Dim strSql = "insert into Divisi(NamaDivisi) values(:NamaDivisi)"
+            Dim param = New With {.NamaDivisi = _divisi.NamaDivisi}
+            Try
+                conn.Execute(strSql, param)
+            Catch oraEx As OracleException
+                Throw New Exception("Error " & oraEx.Message)
+            End Try
+        End Using
+    End Sub
+
+    Public Sub UpdateDivisi(_divisi As Divisi)
+
+    End Sub
+
     Public Sub Dispose() Implements IDisposable.Dispose
         GC.SuppressFinalize(Me)
     End Sub
