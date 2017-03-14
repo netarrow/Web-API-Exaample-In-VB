@@ -12,7 +12,7 @@ Public Class DivisiDAL
     Public Function GetAllDivisi() As IEnumerable(Of Divisi)
         Dim lstDivisi As New List(Of Divisi)
         Using conn As New OracleConnection(GetConnStr())
-            Dim strSql = "select * from Divisi order by NamaDivisi"
+            Dim strSql = "select * from Erick.Divisi order by NamaDivisi"
             Dim cmd As New OracleCommand(strSql, conn)
             conn.Open()
 
