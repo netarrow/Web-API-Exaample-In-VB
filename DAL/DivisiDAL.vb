@@ -28,7 +28,7 @@ Public Class DivisiDAL
 
     Public Sub TambahDivisi(_divisi As Divisi)
         Using conn As New OracleConnection(GetConnStr())
-            Dim strSql = "insert into Divisi(NamaDivisi) values(:NamaDivisi)"
+            Dim strSql = "insert into Erick.Divisi(NamaDivisi) values(:NamaDivisi)"
             Dim param = New With {.NamaDivisi = _divisi.NamaDivisi}
             Try
                 conn.Execute(strSql, param)
@@ -39,7 +39,27 @@ Public Class DivisiDAL
     End Sub
 
     Public Sub UpdateDivisi(_divisi As Divisi)
+        Using conn As New OracleConnection(GetConnStr())
+            Dim strSql = "update Erick.Divisi set NamaDivisi=:NamaDivisi where DivisiID=:DivisiID"
+            Dim param = New With {.NamaDivisi = _divisi.NamaDivisi, .DivisiID = _divisi.DivisiID}
+            Try
+                conn.Execute(strSql, param)
+            Catch oraEx As OracleException
+                Throw New Exception("Error " & oraEx.Message)
+            End Try
+        End Using
+    End Sub
 
+    Public Sub DeleteDivisi(_divisiID As Integer)
+        Using conn As New OracleConnection(GetConnStr())
+            Dim strSql = "delete Erick.Divisi where DivisiID=:DivisiID"
+            Dim param = New With {.DivisiID = _divisiID}
+            Try
+                conn.Execute(strSql, param)
+            Catch oraEx As OracleException
+                Throw New Exception("Error " & oraEx.Message)
+            End Try
+        End Using
     End Sub
 
     Public Sub Dispose() Implements IDisposable.Dispose

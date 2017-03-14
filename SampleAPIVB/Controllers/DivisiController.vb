@@ -20,18 +20,36 @@ Namespace Controllers
         End Function
 
         ' POST: api/Divisi
-        Public Sub PostValue(<FromBody()> ByVal value As String)
-
-        End Sub
+        Public Function PostValue(_divisi As Divisi) As IHttpActionResult
+            Dim divisiBL = New DivisiBL()
+            Try
+                divisiBL.TambahDivisi(_divisi)
+                Return Ok()
+            Catch ex As Exception
+                Return BadRequest(ex.Message)
+            End Try
+        End Function
 
         ' PUT: api/Divisi/5
-        Public Sub PutValue(ByVal id As Integer, <FromBody()> ByVal value As String)
-
-        End Sub
+        Public Function PutValue(_divisi As Divisi) As IHttpActionResult
+            Dim divisiBL = New DivisiBL()
+            Try
+                divisiBL.UpdateDivisi(_divisi)
+                Return Ok()
+            Catch ex As Exception
+                Return BadRequest(ex.Message)
+            End Try
+        End Function
 
         ' DELETE: api/Divisi/5
-        Public Sub DeleteValue(ByVal id As Integer)
-
-        End Sub
+        Public Function DeleteValue(ByVal id As Integer) As IHttpActionResult
+            Dim divisiBL = New DivisiBL()
+            Try
+                divisiBL.DeleteDivisi(id)
+                Return Ok()
+            Catch ex As Exception
+                Return BadRequest(ex.Message)
+            End Try
+        End Function
     End Class
 End Namespace
