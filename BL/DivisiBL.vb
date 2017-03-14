@@ -14,6 +14,11 @@ Public Class DivisiBL
 
     Public Sub TambahDivisi(_divisi As Divisi)
         Dim divisiDal As New DivisiDAL()
+
+        If _divisi.NamaDivisi = String.Empty Or IsNothing(_divisi.NamaDivisi) Then
+            Throw New Exception("Error: Nama divisi harus ada ! ")
+        End If
+
         Try
             divisiDal.TambahDivisi(_divisi)
         Catch ex As Exception
