@@ -14,8 +14,9 @@ Namespace Controllers
         End Function
 
         ' GET: api/Divisi/5
-        Public Function GetValue(ByVal id As Integer) As String
-            Return "value"
+        Public Function GetValue(id As Integer) As Divisi
+            Dim divisiBL = New DivisiBL()
+            Return divisiBL.GetDivisiByID(id)
         End Function
 
         ' POST: api/Divisi
