@@ -4,48 +4,48 @@ Imports BO
 Imports BL
 
 Namespace Controllers
-    Public Class DivisiController
+    Public Class ItemController
         Inherits ApiController
 
-        ' GET: api/Divisi
-        Public Function GetValues() As IEnumerable(Of Divisi)
-            Dim divisiBL = New DivisiBL()
-            Return divisiBL.GetAllDivisi()
+        ' GET: api/Item
+        Public Function GetValues() As IEnumerable(Of Item)
+            Dim ItemBL = New ItemBL()
+            Return ItemBL.GetAllItem()
         End Function
 
-        ' GET: api/Divisi/5
-        Public Function GetValue(id As Integer) As Divisi
-            Dim divisiBL = New DivisiBL()
-            Return divisiBL.GetDivisiByID(id)
+        ' GET: api/Item/5
+        Public Function GetValue(id As Integer) As Item
+            Dim ItemBL = New ItemBL()
+            Return ItemBL.GetItemByID(id)
         End Function
 
-        ' POST: api/Divisi
-        Public Function PostValue(_divisi As Divisi) As IHttpActionResult
-            Dim divisiBL = New DivisiBL()
+        ' POST: api/Item
+        Public Function PostValue(_Item As Item) As IHttpActionResult
+            Dim ItemBL = New ItemBL()
             Try
-                divisiBL.TambahDivisi(_divisi)
+                ItemBL.AddItem(_Item)
                 Return Ok()
             Catch ex As Exception
                 Return BadRequest(ex.Message)
             End Try
         End Function
 
-        ' PUT: api/Divisi/5
-        Public Function PutValue(_divisi As Divisi) As IHttpActionResult
-            Dim divisiBL = New DivisiBL()
+        ' PUT: api/Item/5
+        Public Function PutValue(_Item As Item) As IHttpActionResult
+            Dim ItemBL = New ItemBL()
             Try
-                divisiBL.UpdateDivisi(_divisi)
+                ItemBL.UpdateItem(_Item)
                 Return Ok()
             Catch ex As Exception
                 Return BadRequest(ex.Message)
             End Try
         End Function
 
-        ' DELETE: api/Divisi/5
+        ' DELETE: api/Item/5
         Public Function DeleteValue(ByVal id As Integer) As IHttpActionResult
-            Dim divisiBL = New DivisiBL()
+            Dim ItemBL = New ItemBL()
             Try
-                divisiBL.DeleteDivisi(id)
+                ItemBL.DeleteItem(id)
                 Return Ok()
             Catch ex As Exception
                 Return BadRequest(ex.Message)
