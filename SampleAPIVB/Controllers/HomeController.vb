@@ -2,7 +2,13 @@
     Inherits System.Web.Mvc.Controller
 
     Function Index() As ActionResult
-        ViewData("Title") = "Home Page"
+        ViewData("Title") = "Display"
+
+        Return View()
+    End Function
+
+    Function Specificy() As ActionResult
+        ViewData("Title") = "Specificy"
 
         Return View()
     End Function

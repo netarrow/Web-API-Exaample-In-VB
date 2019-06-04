@@ -20,8 +20,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", New With { .area = "" }, Nothing)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", New With { .area = "" }, Nothing)</li>
+                    <li><a href="http://www.csszengarden.com" target="_blank">CSS Zen Garden</a></li>
+                    <li>@Html.ActionLink("CSS - Display", "Index", "Home", New With { .area = "" }, Nothing)</li>
+                    <li>@Html.ActionLink("CSS - Specificy", "Specificy", "Home", New With { .area = "" }, Nothing)</li>
+                    @*<li>@Html.ActionLink("API", "Index", "Help", New With { .area = "" }, Nothing)</li>*@
                 </ul>
             </div>
         </div>

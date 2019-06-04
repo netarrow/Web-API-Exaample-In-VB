@@ -26,7 +26,6 @@
         background-color: yellow;
     }
 </style>
-</head>
 
     <h1>The display Property</h1>
 
