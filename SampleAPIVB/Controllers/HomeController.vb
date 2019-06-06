@@ -12,4 +12,11 @@
 
         Return View()
     End Function
+
+    Function Position() As ActionResult
+        ViewData("Title") = "Position"
+
+        Return View()
+    End Function
+
 End Class

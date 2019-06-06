@@ -2,13 +2,21 @@
     #greenDiv {
         background-color: green;
     }
-    
+
     .lastDiv .redDiv {
         background-color: yellow;
     }
 
     .redDiv {
         background-color: red;
+    }
+
+    .right pre {
+        margin: 10px;
+    }
+
+    .right div {
+        background-color: blue;
     }
 </style>
 
@@ -17,12 +25,12 @@
         <div class="col-md-6">
             <img src="~/Content/specificity-table1.jpg" />
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 right">
             <div class="row">
                 <div class="col-md-12">
                     <pre> 
                         #greenDiv {
-                            background-color: green;
+                             background-color: green;
                         }
     
                         .lastDiv .redDiv {
@@ -31,6 +39,10 @@
 
                         .redDiv {
                             background-color: red;
+                        }
+
+                        .right div {
+                            background-color: blue;
                         }
                    </pre>
                     <pre>&lt;div id=&quot;greenDiv&quot; style=&quot;color: red&quot;&gt;</pre>
@@ -43,7 +55,7 @@
                     <div id="greenDiv" class="redDiv">.</div>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-md-12 lastDiv">
                     <pre>&lt;div class=&quot;col-md-12 lastDiv&quot;&gt;
