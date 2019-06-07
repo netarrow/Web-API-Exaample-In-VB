@@ -16,7 +16,7 @@
     }
 
     .right div {
-        background-color: blue;
+        background-color: #70aff2;
     }
 </style>
 
@@ -29,22 +29,24 @@
             <div class="row">
                 <div class="col-md-12">
                     <pre> 
-                        #greenDiv {
-                             background-color: green;
-                        }
-    
-                        .lastDiv .redDiv {
-                            background-color: yellow;
-                        }
+                        <code class="css">
+                            #greenDiv {
+                                    background-color: green;
+                            }
 
-                        .redDiv {
-                            background-color: red;
-                        }
+                            .lastDiv .redDiv {
+                                  background-color: yellow;
+                            }
 
-                        .right div {
-                            background-color: blue;
-                        }
-                   </pre>
+                            .redDiv {
+                                   background-color: red;
+                            }
+
+                            .right div {
+                                 background-color: #70aff2;
+                            }
+                        </code>
+</pre>
                     <pre>&lt;div id=&quot;greenDiv&quot; style=&quot;color: red&quot;&gt;</pre>
                     <div id="greenDiv" style="background-color: red">.</div>
                 </div>
