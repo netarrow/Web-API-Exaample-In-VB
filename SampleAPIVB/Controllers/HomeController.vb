@@ -18,5 +18,16 @@
 
         Return View()
     End Function
+    Function Flex() As ActionResult
+        ViewData("Title") = "Flex"
+
+        Return View()
+    End Function
+
+    Function ZenGarden() As ActionResult
+        ViewData("Title") = "ZenGarden"
+
+        Return View()
+    End Function
 
 End Class

@@ -20,10 +20,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="http://www.csszengarden.com" target="_blank">CSS Zen Garden</a></li>
+                    <li>@Html.ActionLink("Html Semantico - CSS Zen Garden", "ZenGarden", "Home", New With {.area = ""}, Nothing)</li>
                     <li>@Html.ActionLink("CSS - Specificy", "Specificy", "Home", New With {.area = ""}, Nothing)</li>
                     <li>@Html.ActionLink("CSS - Display", "Index", "Home", New With {.area = ""}, Nothing)</li>
                     <li>@Html.ActionLink("CSS - Position", "Position", "Home", New With {.area = ""}, Nothing)</li>
+                    <li>@Html.ActionLink("CSS - Flex", "Flex", "Home", New With {.area = ""}, Nothing)</li>
                     @*<li>@Html.ActionLink("API", "Index", "Help", New With { .area = "" }, Nothing)</li>*@
                 </ul>
             </div>

@@ -33,6 +33,7 @@
         position: relative;
         width: 600px;
         height: 400px;
+        margin: 30px;
     }
 
     .absolute {
