@@ -264,6 +264,7 @@
     <Content Include="Views\Home\Position.vbhtml" />
     <Content Include="Views\Home\Flex.vbhtml" />
     <Content Include="Views\Home\ZenGarden.vbhtml" />
+    <Content Include="Views\Home\Javascript.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

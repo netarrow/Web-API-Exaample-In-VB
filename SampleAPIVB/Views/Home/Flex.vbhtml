@@ -1,11 +1,4 @@
 ﻿<style>
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        margin: 0;
-    }
 
     #main {
         display: flex;

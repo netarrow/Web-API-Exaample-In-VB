@@ -30,4 +30,10 @@
         Return View()
     End Function
 
+    Function Javascript() As ActionResult
+        ViewData("Title") = "Javascript"
+
+        Return View()
+    End Function
+
 End Class

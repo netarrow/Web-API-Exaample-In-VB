@@ -33,12 +33,12 @@
         position: relative;
         width: 600px;
         height: 400px;
-        margin: 30px;
+        margin-top: 30px;
     }
 
     .absolute {
         position: absolute;
-        top: 130px;
+        top: 180px;
         right: 0;
         width: 300px;
         height: 200px;

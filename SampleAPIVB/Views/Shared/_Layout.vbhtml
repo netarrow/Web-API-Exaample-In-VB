@@ -16,16 +16,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", New With { .area = "" }, New With {Key .[class] = "navbar-brand"})
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Html Semantico - CSS Zen Garden", "ZenGarden", "Home", New With {.area = ""}, Nothing)</li>
+                <ul class="nav navbar-nav menu">
+                    <li>@Html.ActionLink("Html Semantico", "ZenGarden", "Home", New With {.area = ""}, Nothing)</li>
                     <li>@Html.ActionLink("CSS - Specificy", "Specificy", "Home", New With {.area = ""}, Nothing)</li>
                     <li>@Html.ActionLink("CSS - Display", "Index", "Home", New With {.area = ""}, Nothing)</li>
                     <li>@Html.ActionLink("CSS - Position", "Position", "Home", New With {.area = ""}, Nothing)</li>
                     <li>@Html.ActionLink("CSS - Flex", "Flex", "Home", New With {.area = ""}, Nothing)</li>
-                    @*<li>@Html.ActionLink("API", "Index", "Help", New With { .area = "" }, Nothing)</li>*@
+                    <li>@Html.ActionLink("Javascript", "Javascript", "Home", New With {.area = ""}, Nothing)</li>
                 </ul>
             </div>
         </div>
