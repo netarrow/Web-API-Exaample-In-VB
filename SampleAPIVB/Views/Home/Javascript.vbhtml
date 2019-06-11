@@ -50,27 +50,27 @@
             alert(a); // 4 non 1. In javascript solo le Function creano scope
             }
         </code>
-</pre>
-<script>
-    function testLocalOverride() {
-        var a = 1;
-
-        alert('variabile a globale parte da ' + a)
-
-        function testIfScope() {
-            if (true) {
-                var a = 4;
-                alert('sono la variabile a nel ramo true e sono stata reinizializzata con valore ' + a)
-            }
-
-            alert('sono la variabile a fuori dal if e ho come valore ' + a) // 4 non 1. In javascript solo le Function creano scope
-        }
-
-        testIfScope();
-    }
-</script>
 <button type="button" onclick="testLocalOverride()">Prova</button>
 <h5>Gli ultimi browser supportano le ultime sintassi javascript e creando una variabile con <b>let</b> anche i blocchi fanno scope</h5>
+</pre>
+    <script>
+        function testLocalOverride() {
+            var a = 1;
+
+            alert('variabile a globale parte da ' + a)
+
+            function testIfScope() {
+                if (true) {
+                    var a = 4;
+                    alert('sono la variabile a nel ramo true e sono stata reinizializzata con valore ' + a)
+                }
+
+                alert('sono la variabile a fuori dal if e ho come valore ' + a) // 4 non 1. In javascript solo le Function creano scope
+            }
+
+            testIfScope();
+        }
+    </script>
 
 </section>
 <section>
@@ -100,7 +100,7 @@
     </h5>
     <h4>== vs ===</h4>
     <pre>
-        <code class="js">
+    <code class="js">
             if(1 == "1") { // usando == ritorna true usando === ritorna false
                 alert('true')
             } else alert('false')
@@ -110,12 +110,28 @@
 </section>
 <section>
     <h1>This</h1>
+    <script>
+        var name = "Name";
+
+        function testThis() {
+            alert(this.name); // se non bindato this va sul global scope, cioè window
+        }
+    </script>
+    <pre>
+    <code class="js">
+        var name = "Name";
+
+        function testThis() {
+            alert( this.name ); // se non bindato this va sul global scope, cioè window
+        }
+    </code>
+    <button onclick="testThis()">Prova</button>
+    </pre>
     <pre>
     <code class="js">
         var persona = {
             nome: "Alberto",
             cognome: "Bottarini",
-
 
             stampaNomeCognome: function() {
             alert(this.nome + "n" + this.cognome)
