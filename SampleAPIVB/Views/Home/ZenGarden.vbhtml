@@ -49,13 +49,13 @@
 
         <section class="intro" id="zen-intro">
             <header role="banner">
-                <a href="http://www.csszengarden.com/" target="_blank"><h1>CSS Zen Garden</h1></a>
+                <a rel="noopener noreferrer" target="_blank" href="http://www.csszengarden.com/"><h1>CSS Zen Garden</h1></a>
                 <h2>The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2>
             </header>
 
             <div class="summary" id="zen-summary" role="article">
                 <p>A demonstration of what can be accomplished through <abbr title="Cascading Style Sheets">CSS</abbr>-based design. Select any style sheet from the list to load it into this page.</p>
-                <p>Download the example <a href="/examples/index" title="This page's source HTML code, not to be modified.">html file</a> and <a href="/examples/style.css" title="This page's sample CSS, the file you may modify.">css file</a></p>
+                <p>Download the example <a rel="noopener noreferrer" target="_blank" href="http://csszengarden.com/examples/index" title="This page's source HTML code, not to be modified.">html file</a> and <a rel="noopener noreferrer" target="_blank" href="http://www.csszengarden.com/examples/style.css" title="This page's sample CSS, the file you may modify.">css file</a></p>
             </div>
 
             <div class="preamble" id="zen-preamble" role="article">
@@ -75,9 +75,9 @@
 
             <div class="participation" id="zen-participation" role="article">
                 <h3>Participation</h3>
-                <p>Strong visual design has always been our focus. You are modifying this page, so strong <abbr title="Cascading Style Sheets">CSS</abbr> skills are necessary too, but the example files are commented well enough that even <abbr title="Cascading Style Sheets">CSS</abbr> novices can use them as starting points. Please see the <a href="http://www.mezzoblue.com/zengarden/resources/" title="A listing of CSS-related resources"><abbr title="Cascading Style Sheets">CSS</abbr> Resource Guide</a> for advanced tutorials and tips on working with <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+                <p>Strong visual design has always been our focus. You are modifying this page, so strong <abbr title="Cascading Style Sheets">CSS</abbr> skills are necessary too, but the example files are commented well enough that even <abbr title="Cascading Style Sheets">CSS</abbr> novices can use them as starting points. Please see the <a rel="noopener noreferrer" target="_blank" href="http://www.mezzoblue.com/zengarden/resources/" title="A listing of CSS-related resources"><abbr title="Cascading Style Sheets">CSS</abbr> Resource Guide</a> for advanced tutorials and tips on working with <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
                 <p>You may modify the style sheet in any way you wish, but not the <abbr title="HyperText Markup Language">HTML</abbr>. This may seem daunting at first if you&#8217;ve never worked this way before, but follow the listed links to learn more, and use the sample files as a guide.</p>
-                <p>Download the sample <a href="/examples/index" title="This page's source HTML code, not to be modified.">HTML</a> and <a href="/examples/style.css" title="This page's sample CSS, the file you may modify.">CSS</a> to work on a copy locally. Once you have completed your masterpiece (and please, don&#8217;t submit half-finished work) upload your <abbr title="Cascading Style Sheets">CSS</abbr> file to a web server under your control. <a href="http://www.mezzoblue.com/zengarden/submit/" title="Use the contact form to send us your CSS file">Send us a link</a> to an archive of that file and all associated assets, and if we choose to use it we will download it and place it on our server.</p>
+                <p>Download the sample <a rel="noopener noreferrer" target="_blank" href="http://www.csszengarden.com/examples/index" title="This page's source HTML code, not to be modified.">HTML</a> and <a rel="noopener noreferrer" target="_blank" href="http://www.csszengarden.com/examples/style.css" title="This page's sample CSS, the file you may modify.">CSS</a> to work on a copy locally. Once you have completed your masterpiece (and please, don&#8217;t submit half-finished work) upload your <abbr title="Cascading Style Sheets">CSS</abbr> file to a web server under your control. <a rel="noopener noreferrer" target="_blank" href="http://www.mezzoblue.com/zengarden/submit/" title="Use the contact form to send us your CSS file">Send us a link</a> to an archive of that file and all associated assets, and if we choose to use it we will download it and place it on our server.</p>
             </div>
 
             <div class="benefits" id="zen-benefits" role="article">
@@ -90,16 +90,16 @@
                 <p>Where possible, we would like to see mostly <abbr title="Cascading Style Sheets, levels 1 and 2">CSS 1 &amp; 2</abbr> usage. <abbr title="Cascading Style Sheets, levels 3 and 4">CSS 3 &amp; 4</abbr> should be limited to widely-supported elements only, or strong fallbacks should be provided. The CSS Zen Garden is about functional, practical <abbr title="Cascading Style Sheets">CSS</abbr> and not the latest bleeding-edge tricks viewable by 2% of the browsing public. The only real requirement we have is that your <abbr title="Cascading Style Sheets">CSS</abbr> validates.</p>
                 <p>Luckily, designing this way shows how well various browsers have implemented <abbr title="Cascading Style Sheets">CSS</abbr> by now. When sticking to the guidelines you should see fairly consistent results across most modern browsers. Due to the sheer number of user agents on the web these days &#8212; especially when you factor in mobile &#8212; pixel-perfect layouts may not be possible across every platform. That&#8217;s okay, but do test in as many as you can. Your design should work in at least IE9+ and the latest Chrome, Firefox, iOS and Android browsers (run by over 90% of the population).</p>
                 <p>We ask that you submit original artwork. Please respect copyright laws. Please keep objectionable material to a minimum, and try to incorporate unique and interesting visual themes to your work. We&#8217;re well past the point of needing another garden-related design.</p>
-                <p>This is a learning exercise as well as a demonstration. You retain full copyright on your graphics (with limited exceptions, see <a href="http://www.mezzoblue.com/zengarden/submit/guidelines/">submission guidelines</a>), but we ask you release your <abbr title="Cascading Style Sheets">CSS</abbr> under a Creative Commons license identical to the <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="View the Zen Garden's license information.">one on this site</a> so that others may learn from your work.</p>
-                <p role="contentinfo">By <a href="http://www.mezzoblue.com/">Dave Shea</a>. Bandwidth graciously donated by <a href="http://www.mediatemple.net/">mediatemple</a>. Now available: <a href="http://www.amazon.com/exec/obidos/ASIN/0321303474/mezzoblue-20/">Zen Garden, the book</a>.</p>
+                <p>This is a learning exercise as well as a demonstration. You retain full copyright on your graphics (with limited exceptions, see <a rel="noopener noreferrer" target="_blank" href="http://www.mezzoblue.com/zengarden/submit/guidelines/">submission guidelines</a>), but we ask you release your <abbr title="Cascading Style Sheets">CSS</abbr> under a Creative Commons license identical to the <a rel="noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="View the Zen Garden's license information.">one on this site</a> so that others may learn from your work.</p>
+                <p role="contentinfo">By <a rel="noopener noreferrer" target="_blank" href="http://www.mezzoblue.com/">Dave Shea</a>. Bandwidth graciously donated by <a rel="noopener noreferrer" target="_blank" href="http://www.mediatemple.net/">mediatemple</a>. Now available: <a rel="noopener noreferrer" target="_blank" href="http://www.amazon.com/exec/obidos/ASIN/0321303474/mezzoblue-20/">Zen Garden, the book</a>.</p>
             </div>
 
             <footer>
-                <a href="http://validator.w3.org/check/referer" title="Check the validity of this site&#8217;s HTML" class="zen-validate-html">HTML</a>
-                <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Check the validity of this site&#8217;s CSS" class="zen-validate-css">CSS</a>
-                <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="View the Creative Commons license of this site: Attribution-NonCommercial-ShareAlike." class="zen-license">CC</a>
-                <a href="http://mezzoblue.com/zengarden/faq/#aaa" title="Read about the accessibility of this site" class="zen-accessibility">A11y</a>
-                <a href="https://github.com/mezzoblue/csszengarden.com" title="Fork this site on Github" class="zen-github">GH</a>
+                <a rel="noopener noreferrer" target="_blank" href="http://validator.w3.org/check/referer" title="Check the validity of this site&#8217;s HTML" class="zen-validate-html">HTML</a>
+                <a rel="noopener noreferrer" target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Check the validity of this site&#8217;s CSS" class="zen-validate-css">CSS</a>
+                <a rel="noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="View the Creative Commons license of this site: Attribution-NonCommercial-ShareAlike." class="zen-license">CC</a>
+                <a rel="noopener noreferrer" target="_blank" href="http://mezzoblue.com/zengarden/faq/#aaa" title="Read about the accessibility of this site" class="zen-accessibility">A11y</a>
+                <a rel="noopener noreferrer" target="_blank" href="https://github.com/mezzoblue/csszengarden.com" title="Fork this site on Github" class="zen-github">GH</a>
             </footer>
 
         </div>
@@ -113,28 +113,28 @@
                     <nav role="navigation">
                         <ul>
                             <li>
-                                <a href="/221/" class="design-name">Mid Century Modern</a> by						<a href="http://andrewlohman.com/" class="designer-name">Andrew Lohman</a>
-                            </li>
-                            <li>
-                                <a href="/220/" class="design-name">Garments</a> by						<a href="http://danielmall.com/" class="designer-name">Dan Mall</a>
-                            </li>
-                            <li>
-                                <a href="/219/" class="design-name">Steel</a> by						<a href="http://steffen-knoeller.de" class="designer-name">Steffen Knoeller</a>
-                            </li>
-                            <li>
-                                <a href="/218/" class="design-name">Apothecary</a> by						<a href="http://trentwalton.com" class="designer-name">Trent Walton</a>
-                            </li>
-                            <li>
-                                <a href="/217/" class="design-name">Screen Filler</a> by						<a href="http://elliotjaystocks.com/" class="designer-name">Elliot Jay Stocks</a>
-                            </li>
-                            <li>
-                                <a href="/216/" class="design-name">Fountain Kiss</a> by						<a href="http://jeremycarlson.com" class="designer-name">Jeremy Carlson</a>
-                            </li>
-                            <li>
-                                <a href="/215/" class="design-name">A Robot Named Jimmy</a> by						<a href="http://meltmedia.com/" class="designer-name">meltmedia</a>
-                            </li>
-                            <li>
-                                <a href="/214/" class="design-name">Verde Moderna</a> by						<a href="http://www.mezzoblue.com/" class="designer-name">Dave Shea</a>
+                                <a rel="noopener noreferrer" target="_blank" href="http://csszengarden.com/221/" class="design-name">Mid Century Modern</a> by   <a rel="noopener noreferrer" target="_blank" href="http://andrewlohman.com/" class="designer-name">Andrew Lohman</a>
+                            </li>                                                                                   
+                            <li>                                                                                    
+                                <a rel="noopener noreferrer" target="_blank" href="http://csszengarden.com/220/" class="design-name">Garments</a> by             <a rel="noopener noreferrer" target="_blank" href="http://danielmall.com/" class="designer-name">Dan Mall</a>
+                            </li>                                                                                   
+                            <li>                                                                                    
+                                <a rel="noopener noreferrer" target="_blank" href="http://csszengarden.com/219/" class="design-name">Steel</a> by                <a rel="noopener noreferrer" target="_blank" href="http://steffen-knoeller.de" class="designer-name">Steffen Knoeller</a>
+                            </li>                                                                                   
+                            <li>                                                                                    
+                                <a rel="noopener noreferrer" target="_blank" href="http://csszengarden.com/218/" class="design-name">Apothecary</a> by           <a rel="noopener noreferrer" target="_blank" href="http://trentwalton.com" class="designer-name">Trent Walton</a>
+                            </li>                                                                                   
+                            <li>                                                                                    
+                                <a rel="noopener noreferrer" target="_blank" href="http://csszengarden.com/217/" class="design-name">Screen Filler</a> by        <a rel="noopener noreferrer" target="_blank" href="http://elliotjaystocks.com/" class="designer-name">Elliot Jay Stocks</a>
+                            </li>                                                                                   
+                            <li>                                                                                    
+                                <a rel="noopener noreferrer" target="_blank" href="http://csszengarden.com/216/" class="design-name">Fountain Kiss</a> by        <a rel="noopener noreferrer" target="_blank" href="http://jeremycarlson.com" class="designer-name">Jeremy Carlson</a>
+                            </li>                                                                                   
+                            <li>                                                                                    
+                                <a rel="noopener noreferrer" target="_blank" href="http://csszengarden.com/215/" class="design-name">A Robot Named Jimmy</a> by  <a rel="noopener noreferrer" target="_blank" href="http://meltmedia.com/" class="designer-name">meltmedia</a>
+                            </li>                                                                                   
+                            <li>                                                                                    
+                                <a rel="noopener noreferrer" target="_blank" href="http://csszengarden.com/214/" class="design-name">Verde Moderna</a> by        <a rel="noopener noreferrer" target="_blank" href="http://www.mezzoblue.com/" class="designer-name">Dave Shea</a>
                             </li>
                         </ul>
                     </nav>
@@ -145,12 +145,12 @@
                     <nav role="navigation">
                         <ul>
                             <li class="next">
-                                <a href="/214/page1">
+                                <a rel="noopener noreferrer" target="_blank" href="http://csszengarden.com/214/page1">
                                     Next Designs <span class="indicator">&rsaquo;</span>
                                 </a>
                             </li>
                             <li class="viewall">
-                                <a href="http://www.mezzoblue.com/zengarden/alldesigns/" title="View every submission to the Zen Garden.">
+                                <a rel="noopener noreferrer" target="_blank" href="http://www.mezzoblue.com/zengarden/alldesigns/" title="View every submission to the Zen Garden.">
                                     View All Designs
                                 </a>
                             </li>
@@ -162,27 +162,27 @@
                     <h3 class="resources">Resources:</h3>
                     <ul>
                         <li class="view-css">
-                            <a href="/214/214.css" title="View the source CSS file of the currently-viewed design.">
+                            <a rel="noopener noreferrer" target="_blank" href="http://csszengarden.com/214/214.css" title="View the source CSS file of the currently-viewed design.">
                                 View This Design&#8217;s <abbr title="Cascading Style Sheets">CSS</abbr>
                             </a>
                         </li>
                         <li class="css-resources">
-                            <a href="http://www.mezzoblue.com/zengarden/resources/" title="Links to great sites with information on using CSS.">
+                            <a rel="noopener noreferrer" target="_blank" href="http://www.mezzoblue.com/zengarden/resources/" title="Links to great sites with information on using CSS.">
                                 <abbr title="Cascading Style Sheets">CSS</abbr> Resources
                             </a>
                         </li>
                         <li class="zen-faq">
-                            <a href="http://www.mezzoblue.com/zengarden/faq/" title="A list of Frequently Asked Questions about the Zen Garden.">
+                            <a rel="noopener noreferrer" target="_blank" href="http://www.mezzoblue.com/zengarden/faq/" title="A list of Frequently Asked Questions about the Zen Garden.">
                                 <abbr title="Frequently Asked Questions">FAQ</abbr>
                             </a>
                         </li>
                         <li class="zen-submit">
-                            <a href="http://www.mezzoblue.com/zengarden/submit/" title="Send in your own CSS file.">
+                            <a rel="noopener noreferrer" target="_blank" href="http://www.mezzoblue.com/zengarden/submit/" title="Send in your own CSS file.">
                                 Submit a Design
                             </a>
                         </li>
                         <li class="zen-translations">
-                            <a href="http://www.mezzoblue.com/zengarden/translations/" title="View translated versions of this page.">
+                            <a rel="noopener noreferrer" target="_blank" href="http://www.mezzoblue.com/zengarden/translations/" title="View translated versions of this page.">
                                 Translations
                             </a>
                         </li>

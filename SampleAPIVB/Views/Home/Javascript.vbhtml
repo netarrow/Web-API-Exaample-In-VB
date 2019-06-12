@@ -72,6 +72,8 @@
         }
     </script>
 
+    <h3>AutoCalling Function - NameSpaces</h3>
+
 </section>
 <section>
     <h1>Truly / Falsy value</h1>

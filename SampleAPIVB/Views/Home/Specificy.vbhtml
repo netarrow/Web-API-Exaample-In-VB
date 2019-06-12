@@ -46,7 +46,7 @@
                                  background-color: #70aff2;
                             }
                         </code>
-</pre>
+                    </pre>
                     <pre>&lt;div id=&quot;greenDiv&quot; style=&quot;color: red&quot;&gt;</pre>
                     <div id="greenDiv" style="background-color: red">.</div>
                 </div>
