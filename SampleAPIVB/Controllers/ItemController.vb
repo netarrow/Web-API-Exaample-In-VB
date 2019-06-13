@@ -35,7 +35,7 @@ Namespace Controllers
             Dim ItemBL = New ItemBL()
             Try
                 ItemBL.UpdateItem(_Item)
-                Return Ok()
+                Return Ok(_Item)
             Catch ex As Exception
                 Return BadRequest(ex.Message)
             End Try
@@ -43,10 +43,10 @@ Namespace Controllers
 
         ' DELETE: api/Item/5
         Public Function DeleteValue(ByVal id As Integer) As IHttpActionResult
-            Dim ItemBL = New ItemBL()
+            Dim ItemBL = New ItemBl()
             Try
                 ItemBL.DeleteItem(id)
-                Return Ok()
+                Return Ok(True)
             Catch ex As Exception
                 Return BadRequest(ex.Message)
             End Try

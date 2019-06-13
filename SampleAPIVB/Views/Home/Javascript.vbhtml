@@ -299,37 +299,89 @@
     </pre>
 
     <pre>
-        <span>GET all Items: /api/Item</span>
+        <span>Edit Item: /api/Item/id</span>
+        <span>Item Id= <input onchange="getMyItemName('editItemId', 'editItemName')" type="number" id="editItemId" style="width:50px;" />     Item Name= <input type="text" id="editItemName" /></span>
         <code class="js">
-            function getAllItem() {
-                $.ajax({ url: 'api/Item', method: 'GET' })
+            function getMyItemName(deleteItemid, setValueForId) { // onchange (Item id input)
+                var itemId = document.getElementById(deleteItemid).value;
+
+                $.ajax({
+                    url: `/api/Item/${itemId}`, method: 'GET',
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(`Error: ${errorThrown}\nSomething went wrong!`);
+                    }
+                })
                     .then(function (data) {
                         if (data != '') {
-                            data.forEach(e => {
-                                alert(`I found this: ${e}`);
-                            });
+                            document.getElementById(setValueForId).value = data.NamaItem;
+                        }
+                    });
+            }
+
+            function editItem() {
+                var itemId = document.getElementById('editItemId').value;
+                var itemName = document.getElementById('editItemName').value;
+                var updateItem = { NamaItem: itemName, ItemID: itemId };
+
+                $.ajax({
+                    url: `/api/Item/${itemId}`,
+                    method: 'PUT',
+                    data: updateItem,
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(`Error: ${errorThrown}\nSomething went wrong!`);
+                    }
+                })
+                    .then(function (data) {
+                        let content = 'I PUT (updated):';
+                        if (data != '') {
+                            content += `\n--- -- ---\nItemId: ${data.ItemID}\nItemName: ${data.NamaItem}`;
+                            alert(content);
                         }
                     });
             }
         </code>
-        <button type="button" onclick="getAllItem()">Prova</button>
+        <button type="button" onclick="editItem()">Prova</button>
     </pre>
 
     <pre>
-        <span>GET all Items: /api/Item</span>
+        <span>DELETE Item by id: /api/Item/id   id= <input onchange="getMyItemName('deleteItemid' ,'deleteItemName')" type="number" id="deleteItemid" style="width:50px;" /></span>
+        <span>Delete the Item with name: <input disabled id="deleteItemName" style="width:129px;"/></span>
         <code class="js">
-            function getAllItem() {
-                $.ajax({ url: 'api/Item', method: 'GET' })
+            function getMyItemName(getItemIdFrom, setValueForId) { // onchange (Item id input)
+                var itemId = document.getElementById(getItemIdFrom).value;
+
+                $.ajax({
+                    url: `/api/Item/${itemId}`, method: 'GET',
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(`Error: ${errorThrown}\nSomething went wrong!`);
+                    }
+                })
                     .then(function (data) {
                         if (data != '') {
-                            data.forEach(e => {
-                                alert(`I found this: ${e}`);
-                            });
+                            document.getElementById(setValueForId).value = data.NamaItem;
+                        }
+                    });
+            }
+
+            function deleteItemByID() {
+                var itemId = document.getElementById('deleteItemid').value;
+
+                $.ajax({
+                    url: `/api/Item/${itemId}`, method: 'DELETE',
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(`Error: ${errorThrown}\nSomething went wrong!`);
+                    }
+                })
+                    .then(function (data) {
+                        let content = 'I DELETEd:';
+                        if (data != '') {
+                            content += `\n--- -- ---\nItemId: ${data.ItemID}\nItemName: ${data.NamaItem}`;
+                            alert(content);
                         }
                     });
             }
         </code>
-        <button type="button" onclick="getAllItem()">Prova</button>
+        <button type="button" onclick="deleteItemByID()">Prova</button>
     </pre>
 </section>
 
@@ -383,6 +435,61 @@
                 let content = 'I POSTed:';
                 if (data != '') {
                     content += `\n--- -- ---\nItemId: ${data.ItemID}\nItemName: ${data.NamaItem}`;
+                    alert(content);
+                }
+            });
+    }
+    
+    function getMyItemName(getItemIdFrom, setValueForId) {
+        var itemId = document.getElementById(getItemIdFrom).value;
+
+        $.ajax({
+            url: `/api/Item/${itemId}`, method: 'GET',
+            error: function (xhr, textStatus, errorThrown) {
+                alert(`Error: ${errorThrown}\nSomething went wrong!`);
+            }
+        })
+            .then(function (data) {
+                if (data != '') {
+                    document.getElementById(setValueForId).value = data.NamaItem;
+                }
+            });
+    }
+
+    function editItem() {
+        var itemId = document.getElementById('editItemId').value;
+        var itemName = document.getElementById('editItemName').value;
+        var updateItem = { NamaItem: itemName, ItemID: itemId };
+
+        $.ajax({
+            url: `/api/Item/${itemId}`,
+            method: 'PUT',
+            data: updateItem,
+            error: function (xhr, textStatus, errorThrown) {
+                alert(`Error: ${errorThrown}\nSomething went wrong!`);
+            }
+        })
+            .then(function (data) {
+                let content = 'I PUT (updated):';
+                if (data != '') {
+                    content += `\n--- -- ---\nItemId: ${data.ItemID}\nItemName: ${data.NamaItem}`;
+                    alert(content);
+                }
+            });
+    }
+
+    function deleteItemByID() {
+        var itemId = document.getElementById('deleteItemid').value;
+
+        $.ajax({
+            url: `/api/Item/${itemId}`, method: 'DELETE',
+            error: function (xhr, textStatus, errorThrown) {
+                alert(`Error: ${errorThrown}\nSomething went wrong!`);
+            }
+        })
+            .then(function (data) {
+                let content = 'Item DELETEd!';
+                if (data) {
                     alert(content);
                 }
             });
