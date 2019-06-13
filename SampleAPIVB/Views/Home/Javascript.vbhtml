@@ -508,7 +508,7 @@
     </pre>
 
     <pre>
-        <span>GET Item by id: /api/Item/id  id= <input type="number" id="itemid" style="width:50px;" /></span>
+        <span>GET Item by id: /api/Item/id</span>
         <code class="js">
             function getItemByID() {
                 var itemid = document.getElementById('itemid').value;
@@ -528,12 +528,11 @@
                     });
             }
         </code>
-        <button type="button" onclick="getItemByID()">Prova</button>
+        <span>id= <input type="number" id="itemid" style="width:50px;" />   <button type="button" onclick="getItemByID()">Read</button></span>
     </pre>
     <h4>POST</h4>
     <pre>
         <span>Create new Item: /api/Item</span>
-        <span>New Item Id= <input type="number" id="newItemId" style="width:50px;" />     New Item Name= <input type="text" id="newItemName" /></span>
         <code class="js">
             function createNewItem() {
                 var newItemId = document.getElementById('newItemId').value;
@@ -557,12 +556,11 @@
                     });
             }
         </code>
-        <button type="button" onclick="createNewItem()">Prova</button>
+        <span>New Item Id= <input type="number" id="newItemId" style="width:50px;" />   New Item Name= <input type="text" id="newItemName" />   <button type="button" onclick="createNewItem()">Create</button></span>
     </pre>
     <h4>PUT</h4>
     <pre>
         <span>Edit Item: /api/Item/id</span>
-        <span>Item Id= <input onchange="getMyItemName('editItemId', 'editItemName')" type="number" id="editItemId" style="width:50px;" />     Item Name= <input type="text" id="editItemName" /></span>
         <code class="js">
             function getMyItemName(deleteItemid, setValueForId) { // onchange (Item id input)
                 var itemId = document.getElementById(deleteItemid).value;
@@ -602,12 +600,11 @@
                     });
             }
         </code>
-        <button type="button" onclick="editItem()">Prova</button>
+        <span>Item Id= <input onchange="getMyItemName('editItemId', 'editItemName')" type="number" id="editItemId" style="width:50px;" />   Item Name= <input type="text" id="editItemName" />   <button type="button" onclick="editItem()">Update</button></span>
     </pre>
     <h4>DELETE</h4>
     <pre>
-        <span>DELETE Item by id: /api/Item/id   id= <input onchange="getMyItemName('deleteItemid' ,'deleteItemName')" type="number" id="deleteItemid" style="width:50px;" /></span>
-        <span>Delete the Item with name: <input disabled id="deleteItemName" style="width:129px;"/></span>
+        <span>DELETE Item by id: /api/Item/id</span>
         <code class="js">
             function getMyItemName(getItemIdFrom, setValueForId) { // onchange (Item id input)
                 var itemId = document.getElementById(getItemIdFrom).value;
@@ -643,7 +640,7 @@
                     });
             }
         </code>
-        <button type="button" onclick="deleteItemByID()">Prova</button>
+        <span>id= <input onchange="getMyItemName('deleteItemid' ,'deleteItemName')" type="number" id="deleteItemid" style="width:50px;" />   Delete the Item with name: <input disabled id="deleteItemName" style="width:129px;" />   <button type="button" onclick="deleteItemByID()">Delete</button></span>
     </pre>
 
 </section>
