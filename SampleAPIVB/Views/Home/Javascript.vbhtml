@@ -112,7 +112,7 @@
     <h4><b>2.Utilizzare IIFE (Immediately invoked function expression)</b></h4>
     <pre>
         <code class="js">
-            //  ( /*function*/ )();
+            //or self-invoked  ( /*function*/ )();
 
             (function() {
                 function fun1(){
