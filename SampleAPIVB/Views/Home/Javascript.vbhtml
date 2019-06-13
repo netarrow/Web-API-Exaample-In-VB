@@ -246,15 +246,22 @@
     </pre>
 
     <pre>
-        <span>GET Item by id: /api/Item/id = <input type="number" id="itemid" style="width:50px;" /></span>
+        <span>GET Item by id: /api/Item/id  id= <input type="number" id="itemid" style="width:50px;" /></span>
         <code class="js">
-            function getAllItem() {
-                $.ajax({ url: 'api/Item', method: 'GET' })
+            function getItemByID() {
+                var itemid = document.getElementById('itemid').value;
+
+                $.ajax({
+                    url: `/api/Item/${itemid}`, method: 'GET', dataType: 'JSON',
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(`Error: ${errorThrown}\nSomething went wrong!`);
+                    }
+                })
                     .then(function (data) {
+                        let content = 'I GOT:';
                         if (data != '') {
-                            data.forEach(e => {
-                                alert(`I found this: ${e}`);
-                            });
+                            content += `\n--- -- ---\nItemId: ${data.ItemID}\nItemName: ${data.NamaItem}`;
+                            alert(content);
                         }
                     });
             }
@@ -263,7 +270,8 @@
     </pre>
 
     <pre>
-        <span>GET all Items: /api/Item</span>
+        <span>POST into Item: /api/Item</span>
+        <span>ItemId= <input type="number" id="postitemid" style="width:50px;" />     ItemName= <input type="text" id="postitemname" /></span>
         <code class="js">
             function getAllItem() {
                 $.ajax({ url: 'api/Item', method: 'GET' })
@@ -330,10 +338,33 @@
     }
 
     function getItemByID() {
-        var itemid = document.getElementById('itemid').value;
+        var itemId = document.getElementById('itemid').value;
 
         $.ajax({
-            url: `/api/Item/${itemid}`, method: 'GET', dataType: 'JSON', error: alert(`error: ${errorThrown}`): })
+            url: `/api/Item/${itemId}`, method: 'GET',
+            error: function (xhr, textStatus, errorThrown) {
+                alert(`Error: ${errorThrown}\nSomething went wrong!`);
+            }
+        })
+            .then(function (data) {
+                let content = 'I GOT:';
+                if (data != '') {
+                    content += `\n--- -- ---\nItemId: ${data.ItemID}\nItemName: ${data.NamaItem}`;
+                    alert(content);
+                }
+            });
+    }
+
+    function postItem() {
+        var itemId = document.getElementById('postitemid').value;
+        var itemName = document.getElementById('postitemname').value;
+
+        $.ajax({
+            url: `/api/Item/${itemid}`, method: 'POST', dataType: 'JSON',
+            error: function (xhr, textStatus, errorThrown) {
+                alert(`Error: ${errorThrown}\nSomething went wrong!`);
+            }
+        })
             .then(function (data) {
                 let content = 'I GOT:';
                 if (data != '') {
