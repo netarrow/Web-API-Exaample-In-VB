@@ -224,6 +224,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\box-sizing.jpg" />
     <Content Include="Content\specificity-table1.jpg" />
+    <Content Include="Content\thanks_javascript.png" />
+    <Content Include="Content\WHlX0.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

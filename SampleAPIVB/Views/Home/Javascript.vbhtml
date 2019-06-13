@@ -239,7 +239,7 @@
         </code>
     </pre>
 
-    <a rel="noopener noreferrer" target="_blank" href="http://devhumor.com/content/uploads/images/June2018/thanks_javascript.png">More fun facts about javascript.</a>
+    <a rel="noopener noreferrer" target="_blank" href="~/Content/thanks_javascript.png">More fun facts about javascript.</a>
 
 </section>
 
@@ -478,7 +478,7 @@
         <span>.bind ti permette di impostare il valore di 'this' ora, mentre ti permette di eseguire la funzione nel futuro;</span>
         <span>  perché restituisce un nuovo oggetto funzione.</span>
         <br />
-        <a rel="noopener noreferrer" target="_blank" href="https://i.stack.imgur.com/WHlX0.jpg">Tabella tempi di esecuzione.</a>
+        <a rel="noopener noreferrer" target="_blank" href="~/Content/WHlX0.jpg">Tabella tempi di esecuzione.</a>
     </pre>
 </section>
 
