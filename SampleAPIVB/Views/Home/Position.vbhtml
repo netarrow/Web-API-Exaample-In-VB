@@ -2,7 +2,7 @@
 
     .example {
         border: 2px dashed black;
-        margin: 10px
+        margin: 10px;
     }
 
     .static {

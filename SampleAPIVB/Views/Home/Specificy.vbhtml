@@ -31,19 +31,19 @@
                     <pre> 
                         <code class="css">
                             #greenDiv {
-                                    background-color: green;
+                                background-color: green;
                             }
 
                             .lastDiv .redDiv {
-                                  background-color: yellow;
+                                background-color: yellow;
                             }
 
                             .redDiv {
-                                   background-color: red;
+                                background-color: red;
                             }
 
                             .right div {
-                                 background-color: #70aff2;
+                                background-color: #70aff2;
                             }
                         </code>
                     </pre>
