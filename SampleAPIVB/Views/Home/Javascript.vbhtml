@@ -291,101 +291,38 @@
 
     <h3>Uso di That</h3>
     <pre>
-        <span>Il grosso problema con "this" è che ogni funzione usa lo stesso nome di variabile per il parametro "this".</span>
-        <span>Quindi, quando hai funzioni annidate, non c'è modo di accedere all'argomento "this" esterno.</span>
         <code class="js">
-            var object = {
-              list: [1, 2, 3],
-              increment: 1,
-              doSomething: function doSomething(xs) {
-                return this.list.map(function(x) {
-                  return x + this.increment;
-                })
-              }
+            var persona = function(nome, cognome) {
+                this.nome = nome;
+                this.cognome = cognome;
+                this.stampaNomeCognome = function() {
+                    setTimeout(function (){
+                        alert(this.nome + "n" + this.cognome)
+                    }, 1000)
+                }
             }
-             
-            object.doSomething();
-        </code>
-        <label>output:</label>
-        <code class="js" style="background-color:#454545; color:#EEEEEE; margin-top:0;">
-            1   [NaN, NaN, NaN]
-        </code>
-        <span>Questo non funziona perché la funzione passata a "map" introduce la sua variabile "this",</span>
-        <span>  quindi invece di vedere "object" che stiamo passando a "doSomething", vede "undefined".</span>
-        <br />
-        <span>In precedenza, le persone lo aggiustavano semplicemente assegnando quel valore ad una variabile</span>
-        <span>  con un nome diverso, che non viene riutilizzato in un ambito interno, quindi:</span>
-        <code class="js">
-            var object = {
-              list: [1, 2, 3],
-              increment: 1,
-              doSomething: function doSomething(xs) {
-                var that = this;
-                return this.list.map(function(x) {
-                  return x + that.increment;
-                })
-              }
-            }
-             
-            object.doSomething();
-        </code>
-        <label>output:</label>
-        <code style="background-color:#454545; color:#EEEEEE; margin-top:0;">
-            // => [2, 3, 4]
-        </code>
-        <span>Con le versioni più recenti, un modo migliore (e più conciso) di scrivere sarebbe:</span>
-        <code class="js">
-            const object = {
-              list: [1, 2, 3],
-              increment: 1,
-              doSomething(xs) {
-                return this.list.map(x => x + this.increment)
-              }
-            }
-             
-            object.doSomething();
-        </code>
-        <label>output:</label>
-        <code style="background-color:#454545; color:#EEEEEE; margin-top:0;">
-            // => [2, 3, 4]
-        </code>
-    </pre>
 
-    <h4>SetTimeout()</h4>
-    <pre>
-        <code class="js">
-            // a ThingOne constructor
-            function ThingOne() {
-            	this.name = 'One'
-            	this.sayName = function() { console.log('My name is', this.name) }
-            	return this
-            }
-             
-            // a ThingTwo constructor
-            function ThingTwo() {
-            	this.name = 'Two'
-            	var that = this
-            	this.sayName = function() { console.log('My name is', that.name) }
-            	return this
-            }
-             
-            var thing1 = new ThingOne()
-            var thing2 = new ThingTwo()
-             
-            thing1.sayName() // output line 1
-            thing2.sayName() // output line 2
+            var a = new persona("Alberto", "Bottarini");
+            a.stampaNomeCognome();
+        </code>
+        <button onclick="testThat1()">Prova</button>
 
-            setTimeout(thing1.sayName, 1000) // output line 3
-            setTimeout(thing2.sayName, 1000) // output line 4
+        <code class="js">
+            var persona = function(nome, cognome) {
+                this.nome = nome;
+                this.cognome = cognome;
+                this.stampaNomeCognome = function() {
+                    var that = this;
+                    setTimeout(function (){
+                        alert(that.nome + "n" + that.cognome)
+                    }, 1000)
+                }
+            }
+
+            var a = new persona("Alberto", "Bottarini");
+            a.stampaNomeCognome();
         </code>
-        <label>output:</label>
-        <code class="js" style="background-color:#454545; color:#EEEEEE; margin-top:0;">
-            1   My name is One
-            2   My name is Two
-            3
-            4   My name is undefined
-            5   My name is Two
-        </code>
+        <button onclick="testThat2()">Prova</button>
     </pre>
 
     <h3>I metodi bind(), call() & apply() in JavaScript</h3>
@@ -510,6 +447,37 @@
                 alert(this.nome + "n" + this.cognome)
             }
         }
+        var a = new persona("Alberto", "Bottarini");
+        a.stampaNomeCognome();
+    }
+
+    function testThat1() {
+        var persona = function (nome, cognome) {
+            this.nome = nome;
+            this.cognome = cognome;
+            this.stampaNomeCognome = function () {
+                setTimeout(function () {
+                    alert(this.nome + "n" + this.cognome)
+                }, 1000)
+            }
+        }
+
+        var a = new persona("Alberto", "Bottarini");
+        a.stampaNomeCognome();
+    }
+
+    function testThat2() {
+        var persona = function (nome, cognome) {
+            this.nome = nome;
+            this.cognome = cognome;
+            this.stampaNomeCognome = function () {
+                var that = this;
+                setTimeout(function () {
+                    alert(that.nome + "n" + that.cognome)
+                }, 1000)
+            }
+        }
+
         var a = new persona("Alberto", "Bottarini");
         a.stampaNomeCognome();
     }
