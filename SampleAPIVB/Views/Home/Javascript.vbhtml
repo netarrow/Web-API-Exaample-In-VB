@@ -270,21 +270,32 @@
     </pre>
 
     <pre>
-        <span>POST into Item: /api/Item</span>
-        <span>ItemId= <input type="number" id="postitemid" style="width:50px;" />     ItemName= <input type="text" id="postitemname" /></span>
+        <span>Create new Item: /api/Item</span>
+        <span>New Item Id= <input type="number" id="newItemId" style="width:50px;" />     New Item Name= <input type="text" id="newItemName" /></span>
         <code class="js">
-            function getAllItem() {
-                $.ajax({ url: 'api/Item', method: 'GET' })
+            function createNewItem() {
+                var newItemId = document.getElementById('newItemId').value;
+                var newItemName = document.getElementById('newItemName').value;
+                var newItem = { NamaItem: newItemName, ItemID: newItemId };
+
+                $.ajax({
+                    url: `/api/Item/`,
+                    method: 'POST',
+                    data: newItem,
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(`Error: ${errorThrown}\nSomething went wrong!`);
+                    }
+                })
                     .then(function (data) {
+                        let content = 'I POSTed:';
                         if (data != '') {
-                            data.forEach(e => {
-                                alert(`I found this: ${e}`);
-                            });
+                            content += `\n--- -- ---\nItemId: ${data.ItemID}\nItemName: ${data.NamaItem}`;
+                            alert(content);
                         }
                     });
             }
         </code>
-        <button type="button" onclick="getAllItem()">Prova</button>
+        <button type="button" onclick="createNewItem()">Prova</button>
     </pre>
 
     <pre>
@@ -325,7 +336,7 @@
 <script>
 
     function getAllItem() {
-        $.ajax({ url: '/api/Item', method: 'GET', dataType: 'JSON' })
+        $.ajax({ url: '/api/Item', method: 'GET' })
             .then(function (data) {
                 let content = 'I GOT:';
                 if (data != '') {
@@ -355,18 +366,21 @@
             });
     }
 
-    function postItem() {
-        var itemId = document.getElementById('postitemid').value;
-        var itemName = document.getElementById('postitemname').value;
-
+    function createNewItem() {
+        var newItemId = document.getElementById('newItemId').value;
+        var newItemName = document.getElementById('newItemName').value;
+        var newItem = { NamaItem: newItemName, ItemID: newItemId };
+ 
         $.ajax({
-            url: `/api/Item/${itemid}`, method: 'POST', dataType: 'JSON',
+            url: `/api/Item/`,
+            method: 'POST',
+            data: newItem,
             error: function (xhr, textStatus, errorThrown) {
                 alert(`Error: ${errorThrown}\nSomething went wrong!`);
             }
         })
             .then(function (data) {
-                let content = 'I GOT:';
+                let content = 'I POSTed:';
                 if (data != '') {
                     content += `\n--- -- ---\nItemId: ${data.ItemID}\nItemName: ${data.NamaItem}`;
                     alert(content);

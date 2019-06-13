@@ -24,7 +24,7 @@ Namespace Controllers
             Dim ItemBL = New ItemBL()
             Try
                 ItemBL.AddItem(_Item)
-                Return Ok()
+                Return Ok(_Item)
             Catch ex As Exception
                 Return BadRequest(ex.Message)
             End Try
