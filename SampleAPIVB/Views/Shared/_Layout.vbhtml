@@ -31,6 +31,7 @@
                     <li>@Html.ActionLink("CSS - Position", "Position", "Home", New With {.area = ""}, Nothing)</li>
                     <li>@Html.ActionLink("CSS - Flex", "Flex", "Home", New With {.area = ""}, Nothing)</li>
                     <li>@Html.ActionLink("Javascript", "Javascript", "Home", New With {.area = ""}, Nothing)</li>
+                    <li><a href="http://bootstrapstudio.io" target="_blank">Bootstrap</a></li>
                 </ul>
             </div>
         </div>
