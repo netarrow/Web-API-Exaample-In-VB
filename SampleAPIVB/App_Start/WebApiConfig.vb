@@ -16,6 +16,7 @@ Public Module WebApiConfig
             defaults:=New With {.id = RouteParameter.Optional}
         )
 
-        config.Formatters.Remove(config.Formatters.XmlFormatter)
+        config.Formatters.Remove(config.Formatters.XmlFormatter) ' rimuoviamo Xml formatter per far lavorare le api in json  
+
     End Sub
 End Module
