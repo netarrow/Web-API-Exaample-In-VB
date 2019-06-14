@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SampleAPIVB", "SampleAPIVB\SampleAPIVB.vbproj", "{B1B27843-83A1-4C61-A930-97F10301D992}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DAL", "DAL\DAL.vbproj", "{E00DCE7E-0DC2-468B-90E8-2C1F5D84F31F}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BL", "BL\BL.vbproj", "{B7E75776-0CC4-4867-9760-802E579BA02F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RestApiDesktopCall", "RestApiDesktopCall\RestApiDesktopCall.vbproj", "{2A798425-A572-4BB2-98B8-67CE2BA2083F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{B7E75776-0CC4-4867-9760-802E579BA02F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7E75776-0CC4-4867-9760-802E579BA02F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7E75776-0CC4-4867-9760-802E579BA02F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A798425-A572-4BB2-98B8-67CE2BA2083F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A798425-A572-4BB2-98B8-67CE2BA2083F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A798425-A572-4BB2-98B8-67CE2BA2083F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A798425-A572-4BB2-98B8-67CE2BA2083F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF75D5EF-79E3-4280-89AB-A5386F078871}
 	EndGlobalSection
 EndGlobal
