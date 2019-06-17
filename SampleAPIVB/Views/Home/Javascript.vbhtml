@@ -161,7 +161,7 @@
 <section>
     <h1>Truly / Falsy value</h1>
 
-    <h4>True values</h4>
+    <h4>False values</h4>
     <ul>
         <li>false</li>
         <li>(zero)</li>
@@ -172,10 +172,10 @@
         <li>NaN</li>
     </ul>
 
-    <h4>False values</h4>
+    <h4>True values</h4>
     <ul>
         <li>0</li>
-        <li>false</li>
+        <li>'false'</li>
         <li>[]</li>
         <li>{}</li>
         <li>function() {}</li>
