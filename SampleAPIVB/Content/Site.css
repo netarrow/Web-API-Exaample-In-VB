@@ -20,6 +20,6 @@ textarea {
    
 }
 
-.alteredTable {
+tr[data-isaltered=true] {
     background-color: red;
 }

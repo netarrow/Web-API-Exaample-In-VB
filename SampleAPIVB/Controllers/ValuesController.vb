@@ -9,10 +9,11 @@ Namespace Controllers
         Shared dati As List(Of Item)
 
         Public Sub New()
-
-            dati = New List(Of Item)()
-
-
+            If dati Is Nothing Then
+                dati = New List(Of Item)
+                dati.Add(New Item() With {.NamaItem = "Test", .ItemID = 1})
+                dati.Add(New Item() With {.NamaItem = "Prova", .ItemID = 2})
+            End If
         End Sub
 
         ' GET: api/Values
@@ -25,9 +26,6 @@ Namespace Controllers
         <Route("api/values/{id}/{isAltered}")>
         <HttpPut()>
         Public Function PutValue(ByVal id As Integer, ByVal isAltered As Boolean) As IHttpActionResult
-
-            dati.Add(New Item() With {.ItemID = 1, .NamaItem = "Test", .IsAltered = False})
-            dati.Add(New Item() With {.ItemID = 2, .NamaItem = "Prova", .IsAltered = False})
 
             Dim itemToEdit = dati.SingleOrDefault(Function(item) item.ItemID = id)
 

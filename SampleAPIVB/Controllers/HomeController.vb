@@ -40,16 +40,7 @@ Public Class HomeController
     End Function
 
     Function Form() As ActionResult
-        ViewData("Title") = "Javascript"
-
-        Dim m = New MyModel()
-        m.Name = "Test"
-        m.MyList = New List(Of Item)
-
-        m.MyList.Add(New Item() With {.ItemID = 1, .NamaItem = "Test"})
-        m.MyList.Add(New Item() With {.ItemID = 2, .NamaItem = "Prova"})
-
-        Return View(m)
+        Return View()
     End Function
 
     <HttpPost>
