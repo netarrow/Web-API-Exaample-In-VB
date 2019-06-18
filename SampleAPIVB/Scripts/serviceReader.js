@@ -7,7 +7,8 @@
     $(function() {
 
         $('#toggleColorBtn').on('click', function () {
-            $("#itemList").toggleClass('alteredTable');
+            $('#IsAltered').val("True");
+            $('form').submit();
         });
 
     });
