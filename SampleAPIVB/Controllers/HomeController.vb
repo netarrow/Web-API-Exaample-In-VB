@@ -1,4 +1,7 @@
-﻿Public Class HomeController
+﻿Imports BO
+Imports SampleAPIVB.Models
+
+Public Class HomeController
     Inherits System.Web.Mvc.Controller
 
     Function Index() As ActionResult
@@ -34,6 +37,33 @@
         ViewData("Title") = "Javascript"
 
         Return View()
+    End Function
+
+    Function Form() As ActionResult
+        ViewData("Title") = "Javascript"
+
+        Dim m = New MyModel()
+        m.Name = "Test"
+        m.MyList = New List(Of Item)
+
+        m.MyList.Add(New Item() With {.ItemID = 1, .NamaItem = "Test"})
+        m.MyList.Add(New Item() With {.ItemID = 2, .NamaItem = "Prova"})
+
+        Return View(m)
+    End Function
+
+    <HttpPost>
+    Function PostData(model As MyModel) As ActionResult
+        ViewData("Title") = "Javascript"
+
+        Dim m = New MyModel()
+        m.Name = model.Name
+        m.MyList = New List(Of Item)
+        m.IsAltered = True
+        m.MyList.Add(New Item() With {.ItemID = 1, .NamaItem = "Test"})
+        m.MyList.Add(New Item() With {.ItemID = 2, .NamaItem = "Prova"})
+
+        Return View("Form", m)
     End Function
 
 End Class

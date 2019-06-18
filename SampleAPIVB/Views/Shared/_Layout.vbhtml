@@ -12,6 +12,11 @@
 
     <script>hljs.initHighlightingOnLoad();</script>
 
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="~/Scripts/serviceReader.js"></script>
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -31,6 +36,7 @@
                     <li>@Html.ActionLink("CSS - Position", "Position", "Home", New With {.area = ""}, Nothing)</li>
                     <li>@Html.ActionLink("CSS - Flex", "Flex", "Home", New With {.area = ""}, Nothing)</li>
                     <li>@Html.ActionLink("Javascript", "Javascript", "Home", New With {.area = ""}, Nothing)</li>
+                    <li>@Html.ActionLink("Form", "Form", "Home", New With {.area = ""}, Nothing)</li>
                     <li><a href="http://bootstrapstudio.io" target="_blank">Bootstrap</a></li>
                 </ul>
             </div>
@@ -44,8 +50,6 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required:=False)
 </body>
 </html>
