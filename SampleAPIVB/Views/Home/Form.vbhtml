@@ -1,5 +1,7 @@
-﻿<script>
-    milazzoNS.poplateTable();
+﻿@ModelType Models.MyModel
+
+<script>
+    milazzoNS.poplateTable('@Model.WebApiUrl');
 </script>
 
 <table id="itemList" class="table">

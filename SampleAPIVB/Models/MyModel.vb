@@ -2,6 +2,9 @@
 
 Namespace Models
     Public Class MyModel
+
+        Public Property WebApiUrl() As String
+
         Private _ClassToUseForTable As String
         Public Property Name() As String
 

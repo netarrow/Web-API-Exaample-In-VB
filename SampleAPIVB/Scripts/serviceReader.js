@@ -1,11 +1,11 @@
 ﻿(function (context) {
 
-    context.milazzoNS = context.milazzoNS || {}
+    context.milazzoNS = context.milazzoNS || {};
 
-    context.milazzoNS.poplateTable = function () {
+    context.milazzoNS.poplateTable = function (webApiUrl) {
         $(function () {
             $.ajax({
-                url: '/api/values',
+                url: webApiUrl + '/values',
                 method: 'GET'
             }).then(function (data) {
 
@@ -18,7 +18,7 @@
             $('#changeColorBtn').on('click',
                 function () {
                     $.ajax({
-                        url: '/api/values/1/true',
+                        url: webApiUrl + '/values/1/true',
                         method: 'PUT'
                     }).then(function (data) {
                         $('#itemList').html('');

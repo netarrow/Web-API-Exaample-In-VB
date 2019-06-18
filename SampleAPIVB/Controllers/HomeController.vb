@@ -4,6 +4,13 @@ Imports SampleAPIVB.Models
 Public Class HomeController
     Inherits System.Web.Mvc.Controller
 
+    Function Form() As ActionResult
+        Dim m As MyModel = New MyModel()
+        m.WebApiUrl = "http://localhost:25275/api" ' potrebbe essere letto da web config o da DB
+
+        Return View(m)
+    End Function
+
     Function Index() As ActionResult
         ViewData("Title") = "Display"
 
@@ -39,9 +46,6 @@ Public Class HomeController
         Return View()
     End Function
 
-    Function Form() As ActionResult
-        Return View()
-    End Function
 
     <HttpPost>
     Function PostData(model As MyModel) As ActionResult
