@@ -7,7 +7,7 @@
     $(function() {
 
         $('#toggleColorBtn').on('click', function () {
-            $('#IsAltered').val("True");
+            $('#IsAltered').val("true");
             $('form').submit();
         });
 

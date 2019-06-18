@@ -59,7 +59,7 @@ Public Class HomeController
         Dim m = New MyModel()
         m.Name = model.Name
         m.MyList = New List(Of Item)
-        m.IsAltered = True
+        m.IsAltered = model.IsAltered
         m.MyList.Add(New Item() With {.ItemID = 1, .NamaItem = "Test"})
         m.MyList.Add(New Item() With {.ItemID = 2, .NamaItem = "Prova"})
 
