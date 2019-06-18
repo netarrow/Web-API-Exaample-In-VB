@@ -6,11 +6,16 @@
     
     $(function() {
 
-        $('#toggleColorBtn').on('click', function () {
-            $('#IsAltered').val("true");
-            $('form').submit();
-        });
+        $.ajax({
+            url: '/api/values',
+            method: 'GET'
+        }).then(function (data) {
 
+            $.each(data, function (key, value) {
+                $('#itemList').append('<tr><td>' + value.ItemID + '</td><td>' + value.NamaItem + '</td></tr>');
+            });
+
+        });
     });
     
 })(window);
