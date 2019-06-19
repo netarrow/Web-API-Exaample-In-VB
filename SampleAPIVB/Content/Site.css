@@ -17,9 +17,12 @@ textarea {
 }
 
 .menu {
-   
 }
 
 tr[data-isaltered=true] {
     background-color: red;
+}
+
+#itemPage {
+    margin-top: 20px
 }

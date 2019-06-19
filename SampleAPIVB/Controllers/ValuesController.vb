@@ -44,9 +44,12 @@ Namespace Controllers
         End Function
 
         ' POST: api/Values
-        Public Sub PostValue(<FromBody()> ByVal value As String)
+        Public Function PostValue(<FromBody()> ByVal param As Item)
+            'dati.Add(value)
 
-        End Sub
+            Return Ok(param)
+
+        End Function
 
 
         ' DELETE: api/Values/5

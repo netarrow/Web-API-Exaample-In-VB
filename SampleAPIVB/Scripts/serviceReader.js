@@ -34,6 +34,18 @@
                             });
                     });
                 });
+
+            $('#addRow').on('click',
+                function () {
+                    alert('qq');
+                    $.ajax({
+                        url: webApiUrl + '/values',
+                        method: 'POST',
+                        data: {ItemID: 100, NamaItem: "Test"},
+                    }).then(function (data) {
+                        console.log(data);
+                    });
+                });
         });
     }
 })(window);
