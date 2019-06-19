@@ -37,13 +37,24 @@
 
             $('#addRow').on('click',
                 function () {
-                    alert('qq');
+
+                    var itemId = $('#itemIdInput').val();
+                    var itemName = $('#itemNameInput').val();
+
                     $.ajax({
                         url: webApiUrl + '/values',
                         method: 'POST',
-                        data: {ItemID: 100, NamaItem: "Test"},
+                        data: { ItemID: itemId, NamaItem: itemName },
                     }).then(function (data) {
-                        console.log(data);
+                        $('#itemList').append('<tr data-isaltered="' +
+                            data.IsAltered +
+                            '"><td>' +
+                            data.ItemID +
+                            '</td><td>' +
+                            data.NamaItem +
+                            '</td></tr>');
+                    }).fail(function (errorInfo) {
+                        console.log(errorInfo);
                     });
                 });
         });
