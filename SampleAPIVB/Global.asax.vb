@@ -9,6 +9,9 @@ Public Class SwagConfig
 
         Dim thisAssembly = GetType(SwagConfig).Assembly
 
+        '/swagger/docs/v1 - ritorna json per elaborazioni automatiche
+        '/swagger/ui/index - ritorna UI di test per programmatori destinatari
+
         GlobalConfiguration.Configuration.EnableSwagger(
                 Function(c)
                     c.SingleApiVersion("v1", "Values Api")
