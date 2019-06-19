@@ -46,6 +46,7 @@ Namespace Controllers
         ' POST: api/Values
         Public Function PostValue(<FromBody()> ByVal param As Item) As IHttpActionResult
 
+            dati.Add(param)
 
             Return Ok(param)
 
